@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Destination
+from .models import InfoUpdate
 
 # Create your views here.
 # def home(request):
@@ -7,6 +7,6 @@ from .models import Destination
 
 def index(request):
 
-    dests = Destination.objects.all()
+    dests = InfoUpdate.objects.all()
     
     return render(request, 'index.html', {'posts': dests})
